@@ -27,7 +27,7 @@ Vue.component('app-task', {
         EventBus.$on('editing',function(index){
 
             if (this.index != index) {
-                console.log('Discating :' +this.index)
+                //console.log('Discating :' +this.index)
                 this.discard();
             }
         }.bind(this));
@@ -38,7 +38,7 @@ Vue.component('app-task', {
             this.task.pending = !this.task.pending;
         },
        edit: function () {
-            console.log('Editing :'+this.index);
+            //console.log('Editing :'+this.index);
             EventBus.$emit('editing',this.index);
 
             /*this.tasks.forEach(function (task) {
